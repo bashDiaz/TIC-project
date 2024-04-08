@@ -1,3 +1,7 @@
+# Ignorar el archivo keys.yaml para evitar agregarlo accidentalmente al repositorio
+keys.yaml
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
