@@ -2,6 +2,7 @@ import flet as ft
 from Audio import play_audio
 import time
 
+
 class Card:
     
     def __init__(self, data_info, data_img, data_path, page):
@@ -10,7 +11,6 @@ class Card:
         self.data_path = data_path
         self.page = page 
     
-
     def _sound(self):
         if self.contenedor.bgcolor == ft.colors.LIGHT_BLUE_200:
             self.contenedor.bgcolor = ft.colors.DEEP_ORANGE_200

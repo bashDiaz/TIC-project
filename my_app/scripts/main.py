@@ -3,6 +3,7 @@ import Generate_cards as gc
 import upper_menu as um
 import os 
 
+
 def card_rows(page, dir, data_path):
     # Create a list of cards
     cards = [os.path.splitext(element)[0] for element in dir]
@@ -20,7 +21,6 @@ def card_rows(page, dir, data_path):
     )
     return card_rows
 
-
 def main(page: ft.Page):
     # Set window properties
     page.bgcolor = '#EFEBE8'
@@ -32,11 +32,9 @@ def main(page: ft.Page):
     data_path = os.path.join(current_path, 'my_app\\assets\\pictogramas')
     dir = os.listdir(data_path)
 
-
     #Create headder, upper menu
     upper_menu = um.UpperMenu(page, data_path)
     page.appbar = upper_menu.create_menu()
-
 
     #Create a categorry container
     main_column = ft.Column( 
@@ -52,8 +50,6 @@ def main(page: ft.Page):
         main_column.controls.append(card_rows(page, dir, data_path_col))
         main_column.controls.append(ft.Divider(thickness=3))
 
-        
-
     page.add(main_column)
 
-ft.app(main)
+ft.app ( target=main)
